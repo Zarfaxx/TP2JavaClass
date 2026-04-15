@@ -2,8 +2,8 @@ package com.example.tp2;
 
 import javafx.application.Application;
 
-public class Launcher {
+public class MenuLateral {
     public static void main(String[] args) {
-        Application.launch(HelloApplication.class, args);
+        Application.launch(MainApp.class, args);
     }
 }
