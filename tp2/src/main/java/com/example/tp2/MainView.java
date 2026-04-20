@@ -2,6 +2,7 @@ package com.example.tp2;
 
 import com.example.tp2.views.*;
 import javafx.scene.layout.BorderPane;
+import com.example.tp2.views.ReglesView;
 
 public class MainView extends BorderPane {
 
@@ -11,7 +12,7 @@ public class MainView extends BorderPane {
     }
 
     public void afficherAccueil() {
-        this.setCenter(new AccueilView());
+        this.setCenter(new JeuView.AccueilView());
     }
 
     public void afficherRegles() {
