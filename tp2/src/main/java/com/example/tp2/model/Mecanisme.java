@@ -1,6 +1,6 @@
 package com.example.tp2.model;
 
-import model.Grille;
+import com.example.tp2.model.Grille;
 
 import java.util.Random;
 
