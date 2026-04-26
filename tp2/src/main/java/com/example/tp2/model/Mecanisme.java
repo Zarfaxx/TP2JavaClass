@@ -8,8 +8,8 @@ import java.util.Random;
 public class Mecanisme {
 
     private Grille grille;
-    private int positionJoueur = 0;
-    private int positionOrdinateur = 0;
+    private int positionJoueur = 1;
+    private int positionOrdinateur = 1;
     private Random random = new Random();
 
     //Fonction pour update la grille
@@ -37,8 +37,16 @@ public class Mecanisme {
 
         int nouvellePosition = position + de;
 
-        if (nouvellePosition > 100) {
+        // Clamp to 100
+        if (nouvellePosition >= 100) {
             nouvellePosition = 100;
+
+            if (nom.equals("Joueur"))
+                positionJoueur = 100;
+            else
+                positionOrdinateur = 100;
+
+            return 100;
         }
 
         // Case occupée
@@ -46,20 +54,14 @@ public class Mecanisme {
             nouvellePosition++;
         }
 
-        System.out.println(nom + " avance à " + nouvellePosition);
-
         // Échelle
         if (grille.getEchelles().containsKey(nouvellePosition)) {
-            int destination = grille.getEchelles().get(nouvellePosition);
-            System.out.println("Échelle ! " + nouvellePosition + " -> " + destination);
-            nouvellePosition = destination;
+            nouvellePosition = grille.getEchelles().get(nouvellePosition);
         }
 
         // Serpent
         else if (grille.getSerpents().containsKey(nouvellePosition)) {
-            int destination = grille.getSerpents().get(nouvellePosition);
-            System.out.println("Serpent ! " + nouvellePosition + " -> " + destination);
-            nouvellePosition = destination;
+            nouvellePosition = grille.getSerpents().get(nouvellePosition);
         }
 
         if (nom.equals("Joueur"))

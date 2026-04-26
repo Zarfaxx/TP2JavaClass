@@ -19,25 +19,25 @@ public class Grille {
     //Fonction pour preparer les echelle et les serpents
     private void initialiserMecanismes() {
 
-        // Echelle static sure la grille
-        ajouterEchelle(1, 3, 22);
-        ajouterEchelle(2, 5, 8);
-        ajouterEchelle(3, 11, 26);
-        ajouterEchelle(4, 20, 29);
-        ajouterEchelle(5, 27, 44);
-        ajouterEchelle(6, 36, 55);
-        ajouterEchelle(7, 51, 67);
-        ajouterEchelle(8, 71, 92);
+        // Échelles
+        ajouterEchelle(1, 2, 23);
+        ajouterEchelle(2, 8, 34);
+        ajouterEchelle(3, 20, 77);
+        ajouterEchelle(4, 32, 68);
+        ajouterEchelle(5, 41, 79);
+        ajouterEchelle(6, 74, 88);
+        ajouterEchelle(7, 82, 100);
+        ajouterEchelle(8, 85, 95);
 
-        // Serpents static sure la grille
-        ajouterSerpent(1, 17, 4);
-        ajouterSerpent(2, 19, 7);
-        ajouterSerpent(3, 21, 9);
-        ajouterSerpent(4, 43, 34);
-        ajouterSerpent(5, 62, 18);
-        ajouterSerpent(6, 64, 60);
-        ajouterSerpent(7, 87, 24);
-        ajouterSerpent(8, 95, 75);
+        // Serpents
+        ajouterSerpent(1, 29, 9);
+        ajouterSerpent(2, 38, 15);
+        ajouterSerpent(3, 47, 5);
+        ajouterSerpent(4, 53, 33);
+        ajouterSerpent(5, 62, 37);
+        ajouterSerpent(6, 86, 54);
+        ajouterSerpent(7, 92, 70);
+        ajouterSerpent(8, 97, 25);
     }
 
     //Fonction pour ajouter une echelle au jeu
